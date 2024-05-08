@@ -1,0 +1,65 @@
+﻿<Page x:Class="GUI.Views.Pages.PageAdding"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.Pages"
+      mc:Ignorable="d"
+      Title="PageAdding"
+      Height="720"
+      Width="1280">
+     <Grid>
+           <Grid.RowDefinitions>
+                 <RowDefinition Height="1*"/>
+                 <RowDefinition Height="9*"/>   
+           </Grid.RowDefinitions>
+           
+           <!--Navbar Adding-->
+            <Grid>
+                 <WrapPanel
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Margin="25 0 0 0">
+                    
+                       <!--Tour Adding item-->
+                       <Label
+                             Name="LbTour"
+                             BorderBrush="#F4F4F4"
+                             Style="{StaticResource NavItemStyle}"
+                             Content="Tour"
+                             MouseDown="LbTour_OnMouseDown"/>
+                    
+                       <!--Destination Adding item-->
+                       <Label
+                             Name="LbDestination"
+                             BorderBrush="#F4F4F4"
+                             Style="{StaticResource NavItemStyle}"
+                             Content="Destination"
+                             MouseDown="LbDestination_OnMouseDown"/>
+                    
+                       <!--Hotel Adding item-->
+                       <Label
+                             Name="LbHotel"
+                             BorderBrush="#F4F4F4"
+                             Style="{StaticResource NavItemStyle}"
+                             Content="Hotel"
+                             MouseDown="LbHotel_OnMouseDown"/>
+                       
+                       <!--TourGroup Adding item-->
+                       <Label
+                             Name="LbTourGroup"
+                             BorderBrush="#F4F4F4"
+                             Style="{StaticResource NavItemStyle}"
+                             Content="Tour Group"
+                             MouseDown="LbTourGroup_OnMouseDown"/>
+                 </WrapPanel>
+           </Grid>
+           
+           <!--Frame Container-->
+           <Frame
+                 Name="FrAddingContainer"
+                 Grid.Row="1">
+           </Frame>
+           
+     </Grid>
+</Page>

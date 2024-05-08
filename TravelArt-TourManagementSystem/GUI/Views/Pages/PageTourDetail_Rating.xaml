@@ -1,0 +1,39 @@
+﻿<Page x:Class="GUI.Views.Pages.PageTourDetail_Rating"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GUI.Views.Pages"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d"
+     
+      DataContext="{StaticResource TourDetailVm}"
+      x:Name="PgTourDetailRating"
+      Title="PageTourDetail_Rating" Height="670" Width="385">
+	<Grid>
+
+		<i:Interaction.Triggers>
+			<i:EventTrigger EventName="Loaded">
+				<i:InvokeCommandAction
+					Command="{Binding LoadRatingCommand}"
+					CommandParameter="{Binding ElementName=PgTourDetailRating}"/>
+			</i:EventTrigger>
+			
+		</i:Interaction.Triggers>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition Height="169.6"/>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="475.2"/>
+
+		</Grid.RowDefinitions>
+		<Frame x:Name="FrChart" HorizontalAlignment="Left" Height="150" Margin="5,20,0,0" VerticalAlignment="Top" Width="350" Grid.RowSpan="2"/>
+		<Label x:Name="LbCmt" Content="Comment" HorizontalAlignment="Left" Margin="10,0.4,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="155" Grid.Row="1" FontFamily="Ubuntu" FontWeight="Bold"/>
+		<ScrollViewer x:Name="FrCmt" HorizontalAlignment="Left" Height="460
+		" Margin="10,3.4,-0.2,0" Grid.Row="2" VerticalAlignment="Top" Width="385" VerticalScrollBarVisibility="Hidden">
+			<WrapPanel Name="WpListCmt">
+				
+			</WrapPanel>
+		</ScrollViewer>
+	</Grid>
+</Page>
